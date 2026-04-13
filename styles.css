@@ -1,22 +1,29 @@
 body {
-    background-color: #f6f7ebff;
+    background-image: linear-gradient(to bottom right, #3f88c5ff, #44bba4ff); 
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    margin: 0;  /* Remove body margins first */
+    padding: 0;
 }
 
 .topnav {
   /* Offset-X | Offset-Y | Blur-Radius | Spread-Radius (optional) | Color */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  background-color: #f6f7ebff;
   /*background-color: transparent; /* Makes the bar background clear */
+  /*background: rgba(63, 136, 197, 0.92);*/
+  background: rgba(246, 247, 235, 0.9);
   position: sticky; /* Keeps it visible while scrolling */
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between; /* justify-content: flex-start packs items toward the left edge of the flex container */
   align-items: center;    /* Centers vertically */
-  height: 60px;
+  height: 50px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 30px;
+  top: 1rem;
 }
 
 .headerLogo {
@@ -46,13 +53,17 @@ a:hover { color: #3f88c5ff; text-decoration: underline; }
     font-size: 100px;
     justify-content: center;
     color: #e94f37ff;
-    opacity: 55%;
+    opacity: 75%;
     height: 150px;
 }
 
 h2 {
     display: flex;
     justify-content: center;
+}
+
+p {
+  padding: 1rem;
 }
 
 /*Our team card CSS */
@@ -117,7 +128,7 @@ h2 {
 
 .employee-card a:hover {
   background-color: #3f88c5 !important;
-  color: white !important;
+  color: black !important;
   text-decoration: none !important;
   transform: scale(1.05);
 }
@@ -125,12 +136,11 @@ h2 {
 /*Our Team Flex CSS Section*/
 .team-section {
   padding: 4rem 2rem;
-  background-color: #f6f7eb;
 }
 
 .team-section h2 {
   margin-bottom: 3rem;
-  color: #393e41;
+  color: black;
   font-family: "Space Mono", monospace;
 }
 
@@ -149,4 +159,57 @@ h2 {
     align-items: center;
     gap: 1.5rem;
   }
+}
+
+footer {
+  background: rgba(246, 247, 235, 0.9);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ONLY navbar mobile changes - everything else unchanged */
+
+/* Navbar mobile - 4 links stacked vertically */
+
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        gap: 0.75rem;
+        height: auto;
+        padding: 0.75rem;
+        margin: 0.5rem;
+        top: 0.5rem;
+    }
+    
+    .headerLogo img {
+        max-width: 180px;
+        height: auto;
+    }
+    
+    .topnav ul {
+        display: flex;
+        flex-direction: column;  /* VERTICAL STACK */
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+    
+    .topnav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .topnav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        transition: background 0.2s;
+    }
+    
+    .topnav a:hover {
+        background: rgba(233, 79, 55, 0.1);
+    }
 }
