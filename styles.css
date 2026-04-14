@@ -1,52 +1,77 @@
 body {
-    background-image: linear-gradient(to bottom right, #3f88c5ff, #44bba4ff); 
+    background-image: linear-gradient(to bottom right, #3f88c5ff, #44bba4ff);
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    margin: 0;  /* Remove body margins first */
+    margin: 0;
     padding: 0;
 }
 
 .topnav {
-  /* Offset-X | Offset-Y | Blur-Radius | Spread-Radius (optional) | Color */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  /*background-color: transparent; /* Makes the bar background clear */
-  /*background: rgba(63, 136, 197, 0.92);*/
-  background: rgba(246, 247, 235, 0.9);
-  position: sticky; /* Keeps it visible while scrolling */
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between; /* justify-content: flex-start packs items toward the left edge of the flex container */
-  align-items: center;    /* Centers vertically */
-  height: 50px;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 30px;
-  top: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: rgba(246, 247, 235, 0.9);
+    position: sticky;
+    top: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 30px;
+    box-sizing: border-box;
 }
 
 .headerLogo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.topnav ul {  /* Your nav list */
-  display: flex;
-  gap: 1rem;  /* Tight space between nav links only */
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.menuToggle {
+    display: none;
 }
 
-a:link { 
-    color: #e94f37ff; 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #393e41ff;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:link {
+    color: #e94f37ff;
     text-decoration: none;
     font-weight: bold;
 }
-a:visited { color: #393e41ff; }
-a:hover { color: #3f88c5ff; text-decoration: underline; }
+
+a:visited {
+    color: #393e41ff;
+}
+
+a:hover {
+    color: #3f88c5ff;
+    text-decoration: underline;
+}
 
 .comingSoon {
     display: flex;
@@ -63,153 +88,155 @@ h2 {
 }
 
 p {
-  padding: 1rem;
+    padding: 1rem;
 }
 
-/*Our team card CSS */
 .employee-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 280px;
-  padding: 2rem 1.5rem;
-  background-color: #f6f7eb;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  text-align: center;
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 280px;
+    padding: 2rem 1.5rem;
+    background-color: #f6f7eb;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
 }
 
 .employee-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .employee-card img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
-  border: 5px solid rgba(233, 79, 55, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 5px solid rgba(233, 79, 55, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .employee-card h3 {
-  font-size: 1.4rem;
-  margin: 0 0 0.5rem 0;
-  color: #393e41;
-  font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+    color: #393e41;
+    font-weight: 400;
 }
 
 .employee-card p {
-  color: #666;
-  font-size: 1rem;
-  margin: 0 0 1.5rem 0;
-  font-weight: 400;
+    color: #666;
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 400;
 }
 
 .employee-card a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #e94f37;
-  color: white !important;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  font-family: "Space Mono", monospace;
-  font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #e94f37;
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: "Space Mono", monospace;
+    font-size: 0.95rem;
 }
 
 .employee-card a:hover {
-  background-color: #3f88c5 !important;
-  color: black !important;
-  text-decoration: none !important;
-  transform: scale(1.05);
+    background-color: #3f88c5 !important;
+    color: black !important;
+    text-decoration: none !important;
+    transform: scale(1.05);
 }
 
-/*Our Team Flex CSS Section*/
 .team-section {
-  padding: 4rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .team-section h2 {
-  margin-bottom: 3rem;
-  color: black;
-  font-family: "Space Mono", monospace;
+    margin-bottom: 3rem;
+    color: black;
+    font-family: "Space Mono", monospace;
 }
 
 .team-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .team-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer {
-  background: rgba(246, 247, 235, 0.9);
-  text-align: center;
-  padding: 1rem;
+    background: rgba(246, 247, 235, 0.9);
+    text-align: center;
+    padding: 1rem;
 }
-
-/* ONLY navbar mobile changes - everything else unchanged */
-
-/* Navbar mobile - 4 links stacked vertically */
 
 @media (max-width: 768px) {
     .topnav {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 0.75rem;
         height: auto;
         padding: 0.75rem;
         margin: 0.5rem;
         top: 0.5rem;
     }
-    
-    .headerLogo img {
-        max-width: 180px;
-        height: auto;
-    }
-    
-    .topnav ul {
+
+    .hamburger {
         display: flex;
-        flex-direction: column;  /* VERTICAL STACK */
-        align-items: center;
-        gap: 0.5rem;
-        width: 100%;
-        margin: 0;
-        padding: 0.5rem 0;
+        margin-left: auto;
     }
-    
-    .topnav ul li {
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 0.5rem 0 0 0;
+    }
+
+    .menuToggle:checked ~ .navLinks {
+        display: flex;
+    }
+
+    .navLinks li {
         width: 100%;
         text-align: center;
     }
-    
-    .topnav a {
+
+    .navLinks a {
         display: block;
         padding: 0.75rem 1rem;
-        font-size: 1rem;
         border-radius: 8px;
-        transition: background 0.2s;
     }
-    
-    .topnav a:hover {
+
+    .navLinks a:hover {
         background: rgba(233, 79, 55, 0.1);
+    }
+
+    .headerLogo {
+        max-width: 180px;
+        height: auto;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .comingSoon {
+        font-size: 60px;
+        height: 100px;
     }
 }
