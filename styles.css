@@ -41,7 +41,7 @@ a:link {
 }
 
 a:visited {
-  color: #393e41ff;
+  color: #e94f37ff;
 }
 
 a:hover {
@@ -87,7 +87,7 @@ a:hover {
 .hamburger span {
   width: 28px;
   height: 3px;
-  background: #393e41ff;
+  background: #EEEEEE;
   border-radius: 3px;
   transition: 0.3s ease;
 }
