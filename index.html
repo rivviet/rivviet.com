@@ -12,20 +12,17 @@
 </head>
 <body>
     <div class="topnav">
-        <img class="headerLogo" src="resources/company website header logo.png" alt="Rivviet Company Logo" width="250">
-
+        <a href="index.html" aria-label="Go to homepage">
+        <img class="headerLogo" src="resources/company website header logo.png" alt="Rivviet Company Logo" width="250"></a>
         <input type="checkbox" id="menuToggle" class="menuToggle">
         <label for="menuToggle" class="hamburger" aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
         </label>
 
         <ul class="navLinks">
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/about.html">About</a></li>
         </ul>
     </div>
 
@@ -34,28 +31,50 @@
             <p class="comingSoon">Coming Soon...</p>
         </section>
 
-        <section id="news">
-            <h2>News</h2>
-            <p>As of April 2026, the Rivviet development project team is working on enhancing their coding skills for the purpose of
-                releasing open source homelab projects in 2027.
-            </p>
-        </section>
+<!--This Section is where I am adding the Reason to Hire us Section-->
+<section class="tile-grid">
+  <article class="tile">
+    <div class="tile-header">
+      <div class="tile-logo">
+        <img src="resources/checkmark.svg" alt="Open by Design logo">
+      </div>
+      <h3>Open by Design</h3>
+    </div>
+    <p>Build on software you can inspect, modify, and trust. Rivviet uses open source foundations so clients know exactly what they are getting, with no hidden restrictions or black-box surprises.</p>
+  </article>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>You can find us on YouTube.com at <a href="https://www.youtube.com/@Rivviet">https://www.youtube.com/@Rivviet</a> and our parent company <a href="https://learntohomelab.com/">https://learntohomelab.com/</a></p>
-        </section>
+  <article class="tile">
+    <div class="tile-header">
+      <div class="tile-logo">
+        <img src="resources/no lock in.svg" alt="No subscription or proprietary Lock-In">
+      </div>
+      <h3>No Lock-In</h3>
+    </div>
+    <p>Your systems should belong to you, not to a vendor. Rivviet designs solutions that avoid proprietary traps, making it easier to move, scale, and adapt without being stuck in one platform.</p>
+  </article>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Rivviet pronounced (Riv-ee-it) was started in April of 2026 by a group of individuals with the goal of creating
-                software and development tools for fellow software devs and homelab users who care about open source transparency.
-            </p>
-            <br>
-            <p>Rivviet is owned and operated by the subsidiary Learn To Homelab, a company founded in 2024 by Abe Peterson. Abe is an individual that started
-                Learn To Homelab to bring free information technology to the masses with the goal of hands on FREE THOROUGH training content. His training focuses
-                heavily on bringing security and privacy back to the individual and out of cloud environments.
-            </p>
+  <article class="tile">
+    <div class="tile-header">
+      <div class="tile-logo">
+        <img src="resources/security first.svg" alt="Security comes first">
+      </div>
+      <h3>Security First</h3>
+    </div>
+    <p>Open source does not mean less secure — it means more visible, more reviewable, and easier to harden. Rivviet focuses on secure architecture, careful configuration, and practical protection from day one.</p>
+  </article>
+
+  <article class="tile">
+    <div class="tile-header">
+      <div class="tile-logo">
+        <img src="resources/built for control.svg" alt="Built for your control">
+      </div>
+      <h3>Built for Control</h3>
+    </div>
+    <p>Control your own stack, your own data, and your own future. Rivviet helps clients own their infrastructure so they can make decisions based on their needs, not a vendor’s roadmap.</p>
+  </article>
+</section>
+
+<!--Our Team Section-->
 
             <section class="team-section">
                 <h2>Our Team</h2>
